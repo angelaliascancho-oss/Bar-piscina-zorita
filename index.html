@@ -1,0 +1,676 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Bar La Piscina Zorita</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Concepto: la carta impresa del bar, a lo grande. Tinta sobre papel, tipografía de cartel, fotos de torradas reales y bloques de color como sus pósters. */
+:root {
+  --paper: #F6F5F0;
+  --paper-2: #E9E7DC;
+  --ink: #141A16;
+  --muted: #566058;
+  --olive: #3F5A2E;
+  --tomato: #C2381F;
+  --pool: #1B77A8;
+  --band: #17261C;
+  --on-band: #F3F1E8;
+  --band-2: #B7321D;
+  --on-band-2: #FFF7F2;
+  --f-display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --f-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-hand: "Caveat", "Segoe Script", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1511; --paper-2: #18211B; --ink: #F0EEE5; --muted: #A5B0A7;
+    --olive: #9BC27A; --tomato: #F27A62; --pool: #5DB6E3;
+    --band: #1F3426; --on-band: #F3F1E8; --band-2: #8F2916; --on-band-2: #FFF7F2; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1511; --paper-2: #18211B; --ink: #F0EEE5; --muted: #A5B0A7;
+  --olive: #9BC27A; --tomato: #F27A62; --pool: #5DB6E3;
+  --band: #1F3426; --on-band: #F3F1E8; --band-2: #8F2916; --on-band-2: #FFF7F2; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 400 17px/1.55 var(--f-body);
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1120px; margin-inline: auto; }
+.bleed { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+.ticker.bleed ul { max-width: 1120px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; line-height: .95; margin: 0; letter-spacing: .01em; text-wrap: balance; }
+h2 { font-size: clamp(44px, 9vw, 88px); }
+h3 { font-size: 28px; }
+p { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--pool); outline-offset: 3px; }
+.eyebrow { font: 700 13px/1.2 var(--f-body); text-transform: uppercase; letter-spacing: .16em; }
+.hand { font-family: var(--f-hand); font-weight: 600; font-size: 26px; line-height: 1; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); font: 700 16px/1 var(--f-body); text-transform: uppercase; letter-spacing: .08em; text-decoration: none; cursor: pointer; box-shadow: 4px 4px 0 var(--tomato); transition: transform .12s, box-shadow .12s; }
+.btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--tomato); }
+.btn.alt { background: transparent; color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.btn.alt:hover { box-shadow: 2px 2px 0 var(--ink); }
+.band .btn, .band2 .btn { background: var(--on-band); color: var(--band); border-color: var(--on-band); box-shadow: 4px 4px 0 rgba(0,0,0,.35); }
+
+/* Cabecera */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; flex-wrap: wrap; border-bottom: 3px solid var(--ink); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo { width: 54px; height: 54px; border-radius: 50%; background: #fff; border: 2px solid var(--ink); overflow: hidden; flex: none; }
+.logo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.brand b { font: 400 26px/1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; }
+.nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.nav a:not(.btn) { text-decoration: none; font-weight: 600; font-size: 15px; text-transform: uppercase; letter-spacing: .1em; }
+.nav a:not(.btn):hover { color: var(--tomato); }
+.nav .btn { min-height: 44px; padding: 0 18px; font-size: 14px; }
+
+/* Hero */
+.hero { position: relative; color: #fff; min-height: clamp(480px, 74vh, 760px); display: grid; align-items: end;
+  padding-block: clamp(32px, 6vw, 72px);
+  background:
+    linear-gradient(90deg, rgba(8,12,9,.84) 0%, rgba(8,12,9,.58) 48%, rgba(8,12,9,.12) 100%),
+    linear-gradient(0deg, rgba(8,12,9,.55) 0%, rgba(8,12,9,0) 45%),
+    #2a1d14 url("img/portada.jpg") center 40% / cover no-repeat;
+  border-bottom: 3px solid var(--ink); }
+.hero-in { width: 100%; max-width: 1120px; margin-inline: auto; display: grid; gap: 0; justify-items: start; }
+.hero .eyebrow { color: #F7C948; }
+.hero h1 { font-size: clamp(76px, 15vw, 180px); line-height: .86; margin-block: 18px 22px; }
+.hero h1 span { color: #FF8466; display: block; }
+.hero p.lead { font-size: clamp(18px, 2.4vw, 22px); max-width: 32ch; line-height: 1.4; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 30px; }
+.hero .btn { background: #fff; color: #141A16; border-color: #fff; box-shadow: 4px 4px 0 var(--tomato); }
+.hero .btn.alt { background: transparent; color: #fff; border-color: #fff; box-shadow: 4px 4px 0 rgba(255,255,255,.35); }
+
+/* Cinta de precios */
+.ticker { background: var(--ink); color: var(--paper); padding-block: 14px; overflow: hidden; }
+.ticker ul { display: flex; flex-wrap: wrap; gap: 8px 36px; justify-content: center; font: 400 clamp(20px, 3.4vw, 30px)/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .03em; }
+.ticker li { white-space: nowrap; }
+.ticker em { font-style: normal; color: var(--sun, #F2B632); }
+
+section { scroll-margin-top: 16px; }
+.pad { padding-block: clamp(56px, 9vw, 104px); }
+
+/* Menú del día */
+.band { background: var(--band); color: var(--on-band); }
+.menu-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; margin-bottom: 40px; }
+.menu-head p.sub { max-width: 36ch; margin-top: 16px; opacity: .85; }
+.seal { width: 170px; height: 170px; border-radius: 50%; border: 3px solid var(--on-band); outline: 2px dashed var(--on-band); outline-offset: 6px; display: grid; place-content: center; text-align: center; transform: rotate(-7deg); flex: none; }
+.seal small { font: 700 12px/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; opacity: .85; }
+.seal b { font: 400 54px/1 var(--f-display); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 2px solid var(--on-band); }
+.course { padding: 22px 22px 8px 0; min-width: 0; }
+.course + .course { padding-left: 22px; border-left: 2px solid rgba(243,241,232,.25); }
+.course h3 { color: var(--on-band); margin-bottom: 14px; }
+.course li { padding-block: 7px; border-bottom: 1px solid rgba(243,241,232,.18); }
+.course li:last-child { border-bottom: 0; }
+.includes { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; border-top: 2px solid var(--on-band); padding-top: 20px; }
+.includes b { font: 400 22px/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; }
+.fine { font-size: 14px; opacity: .8; }
+
+/* Carta */
+.carta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 6vw, 72px); margin-top: 44px; align-items: start; }
+.cat + .cat { margin-top: 40px; }
+.cat h3 { font-size: 34px; padding-bottom: 8px; border-bottom: 3px solid var(--ink); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.cat h3 span { font: 600 15px/1 var(--f-body); letter-spacing: .06em; color: var(--muted); }
+.rows li { display: flex; align-items: baseline; gap: 10px; padding-block: 9px; }
+.rows .n { flex: 0 1 auto; min-width: 0; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: .03em; }
+.rows .n small { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--muted); line-height: 1.35; }
+.rows .d { flex: 1 1 20px; border-bottom: 2px dotted var(--muted); transform: translateY(-4px); min-width: 12px; }
+.rows .p { font: 400 22px/1 var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.extra { margin-top: 10px; padding: 12px 16px; border: 2px solid var(--ink); font-size: 15px; font-weight: 600; }
+
+/* Torradas */
+.paper2 { background: var(--paper-2); }
+.tor-head { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: end; justify-content: space-between; margin-bottom: 40px; }
+.tor-head p { max-width: 38ch; color: var(--muted); }
+.tor-price { font: 400 clamp(54px, 10vw, 100px)/.9 var(--f-display); color: var(--tomato); }
+.tor-price small { display: block; font: 700 13px/1.2 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin-top: 10px; }
+
+.half { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(20px, 5vw, 56px); align-items: center; padding: clamp(18px, 3vw, 32px); margin-bottom: 56px; background: var(--paper); border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--tomato); }
+.half-art { position: relative; display: grid; grid-template-columns: 1fr 1fr; aspect-ratio: 5 / 2; min-width: 0; border: 2px solid var(--ink); overflow: hidden; }
+.half-a, .half-b { background-size: 200% 100%; background-repeat: no-repeat; }
+.half-a { background-image: url("img/l1.jpg"); background-position: 0% 50%; }
+.half-b { background-image: url("img/l5.jpg"); background-position: 100% 50%; }
+.half-cut { position: absolute; left: 50%; top: 0; bottom: 0; width: 0; border-left: 4px dashed var(--paper); transform: translateX(-2px); filter: drop-shadow(0 0 2px rgba(0,0,0,.5)); }
+.half-text { display: grid; gap: 12px; align-content: center; min-width: 0; }
+.half-text .hand { color: var(--tomato); font-size: 34px; }
+.half-text h3 { font-size: clamp(40px, 6vw, 64px); }
+.half-text p { max-width: 36ch; }
+.half-text .fine2 { font-size: 14px; color: var(--muted); }
+
+.boards { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.board { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(18px, 4vw, 40px); align-items: center; padding-top: 28px; border-top: 3px solid var(--ink); }
+.board:nth-child(even) { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+.board:nth-child(even) img { order: 2; }
+.board img { width: 100%; height: auto; display: block; border: 2px solid var(--ink); }
+.board .no { font: 700 12px/1 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--tomato); display: block; margin-bottom: 10px; }
+.board h3 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 10px; }
+.board p { color: var(--muted); max-width: 32ch; }
+
+/* El sitio */
+.gal { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+.gal figure { margin: 0; min-width: 0; position: relative; }
+.gal img { width: 100%; height: 100%; min-height: 240px; max-height: 520px; object-fit: cover; display: block; border: 2px solid var(--ink); }
+.gal .g-big { grid-column: 1 / -1; }
+.gal .g-big img { max-height: 560px; }
+.gal figcaption { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--paper); padding: 8px 14px; font: 700 12px/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; }
+
+/* Encargos y eventos */
+.band2 { background: var(--band-2); color: var(--on-band-2); }
+.band2 h2 { margin-bottom: 40px; }
+.events { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 3px solid var(--on-band-2); }
+.ev { padding: 26px 26px 30px 0; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.ev + .ev { padding-left: 26px; border-left: 3px solid rgba(255,247,242,.35); }
+.ev h3 { font-size: 36px; }
+.ev p { max-width: 34ch; opacity: .94; }
+.ev .tag { display: inline-block; width: fit-content; background: var(--on-band-2); color: var(--band-2); font: 700 12px/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; padding: 7px 10px; }
+.call { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
+.call a.num { font: 400 clamp(34px, 7vw, 56px)/1 var(--f-display); letter-spacing: .02em; text-decoration: none; border-bottom: 4px solid var(--on-band-2); font-variant-numeric: tabular-nums; }
+
+/* Reservas */
+.book { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 6vw, 72px); align-items: start; }
+.book .side p { margin-top: 18px; max-width: 34ch; color: var(--muted); }
+.book .side .num { display: inline-block; margin-top: 22px; font: 400 clamp(32px, 6vw, 46px)/1 var(--f-display); text-decoration: none; border-bottom: 4px solid var(--tomato); font-variant-numeric: tabular-nums; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border: 3px solid var(--ink); padding: clamp(18px, 4vw, 32px); min-width: 0; box-shadow: 8px 8px 0 var(--ink); background: var(--paper); }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { font: 700 13px/1 var(--f-body); text-transform: uppercase; letter-spacing: .12em; }
+input, select, textarea { width: 100%; min-height: 50px; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper); color: var(--ink); font: 500 16px/1.3 var(--f-body); }
+textarea { min-height: 84px; resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--pool); box-shadow: 0 0 0 3px var(--pool); }
+.err { color: var(--tomato); font-size: 13px; font-weight: 700; }
+form .btn { grid-column: 1 / -1; width: 100%; }
+form .note { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.ticket { grid-column: 1 / -1; display: grid; gap: 14px; }
+.ticket[hidden] { display: none; }
+.ticket pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 500 15px/1.6 var(--f-body); padding: 16px; border: 2px dashed var(--ink); background: var(--paper-2); }
+.ticket .row { display: flex; gap: 12px; flex-wrap: wrap; }
+.ticket .row .btn { width: auto; flex: 1 1 160px; }
+.badge { width: fit-content; padding: 7px 10px; font: 700 12px/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; background: var(--ink); color: var(--paper); }
+.badge.ok { background: var(--olive); color: #fff; }
+:root[data-theme="dark"] .badge.ok { color: #0F1511; }
+
+.turnos { display: grid; gap: 0; margin: 22px 0; border-top: 2px solid var(--ink); }
+.turnos div { display: flex; justify-content: space-between; gap: 12px; padding-block: 10px; border-bottom: 2px solid var(--ink); }
+.turnos dt { font: 400 22px/1 var(--f-display); text-transform: uppercase; }
+.turnos dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.admin { margin-top: 40px; border: 3px solid var(--ink); padding: 24px; }
+.admin[hidden] { display: none; }
+.res-list { display: grid; gap: 8px; margin-top: 14px; }
+.res { display: grid; gap: 2px; padding: 10px 12px; border: 2px solid var(--ink); font-size: 15px; }
+.res b { font-variant-numeric: tabular-nums; }
+.res span { color: var(--muted); overflow-wrap: anywhere; }
+
+/* Dónde */
+.where { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 5vw, 64px); align-items: start; }
+.where .big { font: 400 clamp(30px, 5vw, 44px)/1.05 var(--f-display); text-transform: uppercase; margin-block: 14px 24px; }
+.where dl { margin: 0; display: grid; gap: 0; }
+.where dt { font: 700 12px/1 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding-top: 16px; }
+.where dd { margin: 6px 0 0; padding-bottom: 16px; border-bottom: 2px solid var(--ink); font-size: 19px; font-weight: 600; }
+.where .cta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
+
+footer { border-top: 3px solid var(--ink); padding-block: 28px 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; font-size: 14px; color: var(--muted); }
+footer .brand b { color: var(--ink); font-size: 22px; }
+
+@media (max-width: 820px) {
+  .hero { background-position: 68% 40%; }
+  .half, .board, .board:nth-child(even) { grid-template-columns: 1fr; }
+  .board:nth-child(even) img { order: 0; }
+  .half { box-shadow: 5px 5px 0 var(--tomato); }
+  .gal { grid-template-columns: 1fr; }
+  .carta { grid-template-columns: 1fr; }
+  .book { grid-template-columns: 1fr; }
+  .nav a:not(.btn) { display: none; }
+  .course + .course, .ev + .ev { padding-left: 0; border-left: 0; border-top: 2px solid rgba(243,241,232,.25); margin-top: 8px; }
+  .course { padding-right: 0; }
+  .ev { padding-right: 0; }
+}
+@media (max-width: 560px) {
+  .top { flex-wrap: nowrap; }
+  .brand b { font-size: 20px; }
+  .logo { width: 44px; height: 44px; }
+  .nav .btn { padding: 0 14px; font-size: 13px; }
+  form { grid-template-columns: 1fr; box-shadow: 5px 5px 0 var(--ink); }
+  .seal { width: 140px; height: 140px; }
+  .seal b { font-size: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#inicio" aria-label="Bar La Piscina Zorita, inicio">
+      <span class="logo"><img src="img/logo.png" alt="Logotipo del Bar La Piscina de Zorita" width="238" height="238"></span>
+      <b>Bar La Piscina</b>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#menu">Menú del día</a>
+      <a href="#carta">Carta</a>
+      <a href="#torradas">Torradas</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#donde">Dónde</a>
+      <a class="btn" href="#reservar">Reservar</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+  <section class="hero bleed" id="inicio" aria-label="Presentación">
+    <div class="hero-in">
+      <p class="eyebrow">Zorita, Cáceres · Abierto desde las 9:00</p>
+      <h1>Bar La<span>Piscina</span></h1>
+      <p class="lead">Menú del día, torradas de 60 centímetros, hamburguesas y raciones. En la terraza de la piscina, de la mañana al cierre.</p>
+      <div class="cta">
+        <a class="btn" href="#carta">Ver la carta</a>
+        <a class="btn alt" href="#reservar">Reservar mesa</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker bleed" aria-label="Precios destacados">
+    <ul>
+      <li>Menú del día <em>14,50 €</em></li>
+      <li>Torradas 60 cm <em>20 €</em></li>
+      <li>Hamburguesa <em>6 €</em></li>
+      <li>Bocadillo <em>6 €</em></li>
+      <li>Pizza <em>3 €</em></li>
+    </ul>
+  </div>
+
+  <section class="band bleed pad" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <p class="eyebrow">Para comer, para cenar o para llevar</p>
+          <h2 id="menu-h" style="margin-top:14px">Menú del día</h2>
+          <p class="sub">Primero, segundo y postre. Cada día se elige entre varios platos.</p>
+        </div>
+        <div class="seal" aria-label="Precio: 14,50 euros"><small>Precio</small><b>14,50€</b></div>
+      </div>
+      <div class="courses">
+        <div class="course">
+          <h3>Primeros</h3>
+          <ul>
+            <li>Ensalada del Parque</li>
+            <li>Torrada de rulo de cabra con almendra gratinada</li>
+            <li>Pasta carbonara o boloñesa</li>
+            <li>Huevos rotos con jamón</li>
+            <li>Sopa castellana</li>
+            <li>Migas extremeñas con huevo</li>
+          </ul>
+        </div>
+        <div class="course">
+          <h3>Segundos</h3>
+          <ul>
+            <li>Pluma ibérica</li>
+            <li>Lomo a la plancha en salsa de mostaza y miel</li>
+            <li>Rabo de toro</li>
+            <li>Pollo a la plancha con patatas fritas</li>
+            <li>Salmón en salsa de almendra</li>
+            <li>Pescado a la plancha</li>
+          </ul>
+        </div>
+        <div class="course">
+          <h3>Postres</h3>
+          <ul>
+            <li>Flan de huevo</li>
+            <li>Tarta de queso</li>
+            <li>Crema catalana</li>
+            <li>Pudin</li>
+            <li>Tarta de chocolate</li>
+            <li>Manzana asada</li>
+          </ul>
+        </div>
+      </div>
+      <div class="includes">
+        <b>Incluye</b>
+        <span>Vino, agua o casera, pan y postre o café.</span>
+        <span class="fine">Menú publicado el 30 de septiembre. Los platos pueden cambiar.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="carta" aria-labelledby="carta-h">
+    <div class="wrap">
+      <p class="eyebrow">Buen provecho</p>
+      <h2 id="carta-h" style="margin-top:14px">La carta</h2>
+      <div class="carta">
+        <div>
+          <div class="cat">
+            <h3>Raciones</h3>
+            <ul class="rows">
+              <li><span class="n">Fritura andaluza</span><i class="d"></i><span class="p">15 €</span></li>
+              <li><span class="n">Croquetas de jamón</span><i class="d"></i><span class="p">14 €</span></li>
+              <li><span class="n">Croquetas variadas</span><i class="d"></i><span class="p">14 €</span></li>
+              <li><span class="n">Calamares</span><i class="d"></i><span class="p">14 €</span></li>
+              <li><span class="n">Prueba de cerdo</span><i class="d"></i><span class="p">14 €</span></li>
+              <li><span class="n">Patatas con beicon y queso</span><i class="d"></i><span class="p">9 €</span></li>
+              <li><span class="n">Patatas con 4 salsas<small>Barbacoa, queso cheddar, brava y alioli</small></span><i class="d"></i><span class="p">10 €</span></li>
+              <li><span class="n">Alitas barbacoa</span><i class="d"></i><span class="p">14 €</span></li>
+              <li><span class="n">Rejos</span><i class="d"></i><span class="p">15 €</span></li>
+              <li><span class="n">Sepia</span><i class="d"></i><span class="p">18 €</span></li>
+              <li><span class="n">Pluma ibérica</span><i class="d"></i><span class="p">18 €</span></li>
+              <li><span class="n">Rabo de toro</span><i class="d"></i><span class="p">15 €</span></li>
+              <li><span class="n">Torreznos fritos de Soria</span><i class="d"></i><span class="p">15 €</span></li>
+            </ul>
+          </div>
+          <div class="cat">
+            <h3>Sándwich</h3>
+            <ul class="rows">
+              <li><span class="n">Mixto<small>Jamón york y queso</small></span><i class="d"></i><span class="p">4 €</span></li>
+              <li><span class="n">Vegetal<small>Lechuga, tomate, huevo duro, espárragos y atún</small></span><i class="d"></i><span class="p">5 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="cat">
+            <h3>Bocadillos <span>Todos a 6 €, calamares 7 €</span></h3>
+            <ul class="rows">
+              <li><span class="n">Jamón york</span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Jamón serrano</span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Tortilla francesa</span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Lomo</span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Pollo<small>Tomate y lechuga</small></span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Beicon</span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Calamares</span><i class="d"></i><span class="p">7 €</span></li>
+              <li><span class="n">Vegetal<small>Lechuga, tomate, huevo duro, espárragos y atún</small></span><i class="d"></i><span class="p">6 €</span></li>
+            </ul>
+            <p class="extra">Suplemento de bocadillo: queso, pimiento, beicon o huevo, 0,50 € cada uno.</p>
+          </div>
+          <div class="cat">
+            <h3>Hamburguesas</h3>
+            <ul class="rows">
+              <li><span class="n">Normal<small>Carne, lechuga, tomate y queso</small></span><i class="d"></i><span class="p">6 €</span></li>
+              <li><span class="n">Especial<small>Carne, lechuga, tomate, queso, beicon y huevo frito</small></span><i class="d"></i><span class="p">8 €</span></li>
+              <li><span class="n">Pollocrispy<small>Pollo, tomate, lechuga y queso</small></span><i class="d"></i><span class="p">6 €</span></li>
+            </ul>
+          </div>
+          <div class="cat">
+            <h3>Pizzas <span>Todas a 3 €</span></h3>
+            <ul class="rows">
+              <li><span class="n">York y queso</span><i class="d"></i><span class="p">3 €</span></li>
+              <li><span class="n">Atún</span><i class="d"></i><span class="p">3 €</span></li>
+              <li><span class="n">Barbacoa</span><i class="d"></i><span class="p">3 €</span></li>
+              <li><span class="n">4 quesos</span><i class="d"></i><span class="p">3 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper2 bleed pad" id="torradas" aria-labelledby="tor-h">
+    <div class="wrap">
+      <div class="tor-head">
+        <div>
+          <p class="eyebrow">Cinco sabores para compartir</p>
+          <h2 id="tor-h" style="margin-top:14px">Torradas</h2>
+          <p style="margin-top:16px">Torradas de 60 centímetros, servidas sobre tabla. Elige la que quieras: todas tienen el mismo precio.</p>
+        </div>
+        <div class="tor-price">20 €<small>Cada torrada de 60 cm</small></div>
+      </div>
+
+      <div class="half" aria-labelledby="half-h">
+        <div class="half-art" role="img" aria-label="Ejemplo de torrada mitad jamón ibérico y mitad atún con espárragos">
+          <div class="half-a"></div><div class="half-b"></div>
+          <span class="half-cut" aria-hidden="true"></span>
+        </div>
+        <div class="half-text">
+          <p class="hand">¿No te decides?</p>
+          <h3 id="half-h">Mitad y mitad</h3>
+          <p>Puedes pedir dos sabores en la misma torrada: una mitad de una variedad y la otra mitad de otra.</p>
+          <p class="fine2">Foto de ejemplo: mitad jamón ibérico, mitad atún con espárragos. Pregunta el precio al pedir.</p>
+        </div>
+      </div>
+
+      <ol class="boards">
+        <li class="board">
+          <img src="img/l1.jpg" alt="Torrada de jamón ibérico" width="1500" height="595" loading="lazy">
+          <div><span class="no">1ª variedad</span><h3>Jamón ibérico</h3><p>Tomate, aceite de oliva y jamón ibérico.</p></div>
+        </li>
+        <li class="board">
+          <img src="img/l2.jpg" alt="Torrada de butifarra fresca con pimiento frito" width="1500" height="598" loading="lazy">
+          <div><span class="no">2ª variedad</span><h3>Butifarra fresca</h3><p>Tomate, pimiento frito, aceite de oliva y butifarra fresca.</p></div>
+        </li>
+        <li class="board">
+          <img src="img/l3.jpg" alt="Torrada de salmón ahumado, queso fresco y crema de aguacate" width="1500" height="720" loading="lazy">
+          <div><span class="no">3ª variedad</span><h3>Salmón ahumado</h3><p>Crema de aguacate, queso fresco y salmón ahumado.</p></div>
+        </li>
+        <li class="board">
+          <img src="img/l4.jpg" alt="Torrada de anchoas con cebolla frita y pimiento" width="1500" height="609" loading="lazy">
+          <div><span class="no">4ª variedad</span><h3>Anchoas</h3><p>Tomate, pimiento frito, cebolla caramelizada, cebolla frita y anchoas.</p></div>
+        </li>
+        <li class="board">
+          <img src="img/l5.jpg" alt="Torrada de atún, tomate, espárragos blancos y aceitunas negras" width="1500" height="569" loading="lazy">
+          <div><span class="no">5ª variedad</span><h3>Atún y espárragos</h3><p>Tomate, aceite de oliva, atún, espárragos blancos y aceitunas negras.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="pad" id="sitio" aria-labelledby="sitio-h">
+    <div class="wrap">
+      <p class="eyebrow">Para sentarte a gusto</p>
+      <h2 id="sitio-h" style="margin-top:14px">El sitio</h2>
+      <div class="gal">
+        <figure class="g-big"><img src="img/terraza.jpg" alt="Terraza cubierta con ventanales, mesas y sillas de mimbre" width="1100" height="900" loading="lazy"><figcaption>Terraza cubierta</figcaption></figure>
+        <figure><img src="img/salon.jpg" alt="Salón interior con mesas puestas y chimenea" width="1100" height="900" loading="lazy"><figcaption>Salón interior</figcaption></figure>
+        <figure><img src="img/plaza.jpg" alt="Espacio exterior bajo los árboles con mesas redondas montadas para un evento" width="1100" height="1000" loading="lazy"><figcaption>Espacio exterior para eventos</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band2 bleed pad" id="eventos" aria-labelledby="ev-h">
+    <div class="wrap">
+      <p class="eyebrow">Por encargo y para grupos</p>
+      <h2 id="ev-h" style="margin-top:14px">Paellas y eventos</h2>
+      <div class="events">
+        <article class="ev">
+          <span class="tag">Mínimo 48 horas</span>
+          <h3>Paellas y arroz con bogavante</h3>
+          <p>Se hacen por encargo. Pide con antelación y lo tendrás listo para tu mesa o para llevar.</p>
+        </article>
+        <article class="ev">
+          <span class="tag">Grupos</span>
+          <h3>Cumpleaños y celebraciones</h3>
+          <p>Menú para grupos junto a la piscina. Cuéntanos cuántos sois y qué celebráis, y lo preparamos.</p>
+        </article>
+        <article class="ev">
+          <span class="tag">Reservas desde el 1 de diciembre</span>
+          <h3>Cenas de empresa en Navidad</h3>
+          <p>Espacio al aire libre junto a la piscina, decoración navideña, menú especial para grupos y servicio personalizado.</p>
+        </article>
+      </div>
+      <div class="call">
+        <span class="hand">Pregunta por Vicente</span>
+        <a class="num" href="tel:+34659892741">659 89 27 41</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="reservar" aria-labelledby="res-h">
+    <div class="wrap">
+      <div class="book">
+        <div class="side">
+          <p class="eyebrow" style="color:var(--tomato)">Reservas</p>
+          <h2 id="res-h" style="margin-top:14px">Reserva tu mesa</h2>
+          <p>Elige día, hora y personas. Al pulsar el botón se abre WhatsApp con el mensaje ya escrito: solo tienes que enviarlo.</p>
+          <dl class="turnos">
+            <div><dt>Comidas</dt><dd>13:00 a 16:00</dd></div>
+            <div><dt>Cenas</dt><dd>20:00 a 23:00</dd></div>
+          </dl>
+          <p style="font-size:15px">Paellas y arroz con bogavante: con 48 horas de antelación.</p>
+        </div>
+
+        <form id="form" novalidate>
+          <div class="field full"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" required><span class="err" id="e-nombre"></span></div>
+          <div class="field"><label for="fecha">Fecha</label><input id="fecha" name="fecha" type="date" required><span class="err" id="e-fecha"></span></div>
+          <div class="field"><label for="hora">Hora</label><select id="hora" name="hora" required></select><span class="err" id="e-hora"></span></div>
+          <div class="field"><label for="personas">Personas</label><select id="personas" name="personas"></select></div>
+          <div class="field"><label for="motivo">Ocasión</label>
+            <select id="motivo" name="motivo">
+              <option>Comida o cena normal</option><option>Menú del día</option><option>Torradas</option><option>Cumpleaños o celebración</option><option>Paella o arroz por encargo</option><option>Cena de empresa</option><option>Otra</option>
+            </select></div>
+          <div class="field full"><label for="notas">Comentarios (opcional)</label><textarea id="notas" name="notas" placeholder="Alergias, trona, tipo de paella…"></textarea></div>
+          <button class="btn" type="submit" id="send">Pedir reserva</button>
+          <p class="note">Se abrirá WhatsApp con tu reserva. La reserva queda confirmada cuando el bar te responda.</p>
+
+          <div class="ticket" id="ticket" hidden aria-live="polite">
+            <span class="badge ok" id="badge">Mensaje preparado</span>
+            <pre id="summary"></pre>
+            <div class="row">
+              <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+              <button class="btn alt" type="button" id="copy">Copiar mensaje</button>
+            </div>
+            <p class="note">Si WhatsApp no se ha abierto solo, pulsa «Abrir WhatsApp». También puedes copiar el mensaje y pegarlo en el chat.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper2 bleed pad" id="donde" aria-labelledby="donde-h">
+    <div class="wrap where">
+      <div>
+        <p class="eyebrow">Dónde estamos</p>
+        <h2 id="donde-h" style="margin-top:14px">En la piscina de Zorita</h2>
+        <p class="big">Zorita · Cáceres</p>
+        <div class="cta">
+          <a class="btn" href="https://maps.app.goo.gl/9xij5rmXdTfaxyA4A" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          <a class="btn alt" href="https://www.instagram.com/bar_piscina_zorita/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <dl>
+        <dt>Dirección</dt><dd>Av. de la Constitución, s/n, junto a la piscina municipal · 10130 Zorita</dd>
+        <dt>Horario</dt><dd>De las 9:00 al cierre</dd>
+        <dt>Teléfono y reservas</dt><dd>659 89 27 41 · Vicente</dd>
+        <dt>Instagram</dt><dd>@bar_piscina_zorita</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer>
+    <a class="brand" href="#inicio"><span class="logo" style="width:44px;height:44px"><img src="img/logo.png" alt="" width="238" height="238"></span><b>Bar La Piscina</b></a>
+    <p>Carta y precios tomados del Instagram del bar en octubre de 2026. Pueden cambiar: confirma por teléfono.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  // Número de WhatsApp del bar, con prefijo de país y sin signos: 34 + número.
+  var WHATSAPP = "34659892741";
+  var TZ = "Europe/Madrid";
+  var DAYS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  // Turnos permitidos, en minutos desde medianoche, cada 30 min.
+  var TURNOS = [
+    { id: "comer", etiqueta: "Comidas", desde: 13 * 60, hasta: 16 * 60 },
+    { id: "cenar", etiqueta: "Cenas", desde: 20 * 60, hasta: 23 * 60 }
+  ];
+
+  function ahora() {
+    var p = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+    var g = {}; p.forEach(function (x) { g[x.type] = x.value; });
+    return { iso: g.year + "-" + g.month + "-" + g.day, min: (+g.hour % 24) * 60 + (+g.minute) };
+  }
+  function hhmm(m) { var h = Math.floor(m / 60), mi = m % 60; return (h < 10 ? "0" : "") + h + ":" + (mi < 10 ? "0" : "") + mi; }
+  function turnoDe(m) {
+    for (var i = 0; i < TURNOS.length; i++) if (m >= TURNOS[i].desde && m <= TURNOS[i].hasta && (m - TURNOS[i].desde) % 30 === 0) return TURNOS[i];
+    return null;
+  }
+  function fechaLarga(iso) { var d = new Date(iso + "T12:00:00"); return DAYS[d.getDay()] + " " + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear(); }
+  function setErr(id, m) { document.getElementById(id).textContent = m || ""; }
+
+  var fecha = document.getElementById("fecha");
+  var hora = document.getElementById("hora");
+  var pers = document.getElementById("personas");
+
+  // Personas
+  for (var i = 1; i <= 12; i++) { var po = document.createElement("option"); po.value = i; po.textContent = i === 1 ? "1 persona" : i + " personas"; if (i === 2) po.selected = true; pers.appendChild(po); }
+  var mas = document.createElement("option"); mas.value = "más de 12"; mas.textContent = "Más de 12"; pers.appendChild(mas);
+
+  // Horas: solo dentro de los dos turnos
+  function pintarHoras() {
+    var n = ahora(), previa = hora.value, hayLibre = false;
+    hora.textContent = "";
+    var vacia = document.createElement("option"); vacia.value = ""; vacia.textContent = "Elige hora"; hora.appendChild(vacia);
+    TURNOS.forEach(function (t) {
+      var g = document.createElement("optgroup"); g.label = t.etiqueta + " · " + hhmm(t.desde) + " a " + hhmm(t.hasta);
+      for (var m = t.desde; m <= t.hasta; m += 30) {
+        var o = document.createElement("option"); o.value = hhmm(m); o.textContent = hhmm(m);
+        if (fecha.value === n.iso && m <= n.min) o.disabled = true; else hayLibre = true;
+        g.appendChild(o);
+      }
+      hora.appendChild(g);
+    });
+    if (previa) { var op = hora.querySelector('option[value="' + previa + '"]'); if (op && !op.disabled) hora.value = previa; }
+    setErr("e-hora", hayLibre ? "" : "Hoy ya no quedan horas. Elige otro día.");
+  }
+  var hoy = ahora().iso;
+  fecha.min = hoy; fecha.value = hoy;
+  pintarHoras();
+  fecha.addEventListener("change", function () { setErr("e-fecha"); pintarHoras(); });
+
+  function mensaje(d) {
+    var turno = turnoDe(d.min);
+    var ver = turno.id === "comer" ? "comer" : "cenar";
+    var l = [
+      "Hola, quiero hacer una reserva para " + ver + " en el Bar La Piscina de Zorita.",
+      "",
+      "Nombre: " + d.nombre,
+      "Día: " + fechaLarga(d.fecha),
+      "Hora: " + d.hora + " (" + (ver === "comer" ? "comida" : "cena") + ")",
+      "Personas: " + d.personas,
+      "Ocasión: " + d.motivo
+    ];
+    if (d.notas) l.push("Comentarios: " + d.notas);
+    l.push("", "Gracias.");
+    return l.join("\n");
+  }
+
+  document.getElementById("form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var n = ahora(), ok = true;
+    var nombre = document.getElementById("nombre").value.trim();
+    var f = fecha.value, h = hora.value;
+    setErr("e-nombre"); setErr("e-fecha"); setErr("e-hora");
+    if (nombre.length < 2) { setErr("e-nombre", "Escribe tu nombre."); ok = false; }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(f) || f < n.iso) { setErr("e-fecha", "Elige hoy o un día futuro."); ok = false; }
+    var min = NaN;
+    if (!h) { setErr("e-hora", "Elige una hora de comida o de cena."); ok = false; }
+    else {
+      min = (+h.slice(0, 2)) * 60 + (+h.slice(3, 5));
+      if (!turnoDe(min)) { setErr("e-hora", "Solo hay reservas de 13:00 a 16:00 y de 20:00 a 23:00."); ok = false; }
+      else if (f === n.iso && min <= n.min) { setErr("e-hora", "Esa hora ya ha pasado. Elige otra."); ok = false; }
+    }
+    if (!ok) return;
+
+    var texto = mensaje({ nombre: nombre, fecha: f, hora: h, min: min, personas: pers.value, motivo: document.getElementById("motivo").value, notas: document.getElementById("notas").value.trim() });
+    var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto);
+    document.getElementById("summary").textContent = texto;
+    var wa = document.getElementById("wa"); wa.href = url;
+    document.getElementById("ticket").hidden = false;
+    wa.click();
+    document.getElementById("ticket").scrollIntoView({ block: "nearest", behavior: "smooth" });
+  });
+
+  document.getElementById("copy").addEventListener("click", function () {
+    var s = document.getElementById("summary"), b = this, t0 = b.textContent;
+    function done(m) { b.textContent = m; setTimeout(function () { b.textContent = t0; }, 1800); }
+    function fallback() { var r = document.createRange(); r.selectNodeContents(s); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); done("Texto seleccionado"); }
+    try { navigator.clipboard.writeText(s.textContent).then(function () { done("Copiado"); }, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
